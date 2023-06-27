@@ -116,58 +116,36 @@ function fromJSON(proto, json) {
  *
  *  For more examples see unit tests.
  */
-// class SelectorBuilder {
-//   constructor() {
-//     this.value = '';
-//   }
+const cssSelectorBuilder = {
+  element(/* value */) {
+    throw new Error('Not implemented');
+  },
 
-//   element(value) {
-//     const builder = new SelectorBuilder();
-//     builder.value = this.value + value;
-//     return builder;
-//   }
+  id(/* value */) {
+    throw new Error('Not implemented');
+  },
 
-//   id(value) {
-//     const builder = new SelectorBuilder();
-//     builder.value = `${this.value}#${value}`;
-//     return builder;
-//   }
+  class(/* value */) {
+    throw new Error('Not implemented');
+  },
 
-//   class(value) {
-//     const builder = new SelectorBuilder();
-//     builder.value = `${this.value}.${value}`;
-//     return builder;
-//   }
+  attr(/* value */) {
+    throw new Error('Not implemented');
+  },
 
-//   attr(value) {
-//     const builder = new SelectorBuilder();
-//     builder.value = `${this.value}[${value}]`;
-//     return builder;
-//   }
+  pseudoClass(/* value */) {
+    throw new Error('Not implemented');
+  },
 
-//   pseudoClass(value) {
-//     const builder = new SelectorBuilder();
-//     builder.value = `${this.value}:${value}`;
-//     return builder;
-//   }
+  pseudoElement(/* value */) {
+    throw new Error('Not implemented');
+  },
 
-//   pseudoElement(value) {
-//     const builder = new SelectorBuilder();
-//     builder.value = `${this.value}::${value}`;
-//     return builder;
-//   }
+  combine(/* selector1, combinator, selector2 */) {
+    throw new Error('Not implemented');
+  },
+};
 
-//   combine(selector1, combinator, selector2) {
-//     this.value = `${selector1.stringify()} ${combinator} ${selector2.stringify()}`;
-//     return this;
-//   }
-
-//   stringify() {
-//     return this.value;
-//   }
-// }
-
-// const cssSelectorBuilder = new SelectorBuilder();
 
 module.exports = {
   Rectangle,
